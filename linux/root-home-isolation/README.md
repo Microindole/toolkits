@@ -18,5 +18,11 @@
 ## 使用
 
 ```bash
+# 首次
+cd /home/abc
 chmod +x setup.sh
 ./setup.sh
+
+# 之后启动
+source /home/abc/enter_abc.sh
+```
