@@ -1,4 +1,11 @@
 #!/bin/bash
+
 export HOME=/home/abc
-cd /home/abc || exit 1
-exec bash --rcfile /home/abc/.bashrc
+
+if [ -f /home/abc/.env ]; then
+    source /home/abc/.env
+fi
+
+cd /home/abc || return 1 2>/dev/null || exit 1
+
+echo "[abc env] activated"
